@@ -10,17 +10,10 @@ jobs:
       with:
         node-version: 14.x
     - run: npm ci
+    - run: npm install
     - run: xcode-select -p
     - run: pod install
       working-directory: ios
       name: Install pod dependencies
     - name: Build iOS (debug)
-      run: "xcodebuild \
-        -workspace ios/HelloReactNative.xcworkspace \
-        -scheme HelloReactNative \
-        clean archive \
-        -sdk iphoneos \
-        -configuration Debug \
-        -UseModernBuildSystem=NO \
-        -archivePath $PWD/HelloReactNative \
-        CODE_SIGNING_ALLOWED=NO"
+      run: "xcodebuild -workspace ios/HelloReactNative.xcworkspace -scheme HelloReactNative clean archive -sdk iphoneos -configuration Debug -UseModernBuildSystem=NO -archivePath $PWD/HelloReactNative CODE_SIGNING_ALLOWED=NO"
