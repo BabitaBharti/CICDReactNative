@@ -21,6 +21,7 @@
                 - pattern: develop
                   include: true
                   source: true
+                  
         scripts:
             - name: Install npm dependencies
               script: |
