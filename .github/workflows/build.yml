@@ -16,4 +16,4 @@ jobs:
       working-directory: ios
       name: Install pod dependencies
     - name: Build iOS (debug)
-      run: "xcodebuild -workspace ios/HelloReactNative.xcworkspace -scheme HelloReactNative clean archive -sdk iphoneos -configuration Debug -UseModernBuildSystem=NO -archivePath $PWD/HelloReactNative CODE_SIGNING_ALLOWED=NO"
+      run: "xcodebuild -workspace ios/InflationCalc.xcworkspace -scheme InflationCalc clean archive -sdk iphoneos -configuration Debug -UseModernBuildSystem=NO -archivePath $PWD/InflationCalc CODE_SIGNING_ALLOWED=NO"
