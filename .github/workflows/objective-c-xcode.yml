@@ -20,6 +20,5 @@ jobs:
 
       - name: Build ipa for distribution
         run: |
-            - xcodebuild clean -project ./ios/InflationCalc.xcodeproj -scheme SchemeName | xcpretty
-            - xcodebuild test -project ./ios/InflationCalc.xcodeproj -scheme SchemeName -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.2' | xcpretty -s
-     
+            - xcode-project build-ipa --workspace ./ios/InflationCalc.xcodeproj -scheme ./ios/InflationCalc.xcodeproj/xcshareddata/xcschemes
+       
